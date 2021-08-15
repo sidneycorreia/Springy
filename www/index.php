@@ -6,3 +6,6 @@
  *  \copyright  Copyright (c) 2007-2016 Fernando Val
  *  \version    1.0.2
  */
+
+require_once '_Main.php';
+//echo "oi";

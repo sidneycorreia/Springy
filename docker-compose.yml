@@ -1,0 +1,43 @@
+version: "3"
+
+volumes:
+  pgdata:
+    driver: local
+  
+  mydata:
+    driver: local
+
+networks:
+  network-default:
+    driver: bridge
+
+services:
+  web:
+    container_name: medportal-web
+    build:
+      context: ./docker/php
+    volumes:
+      - .:/var/www/html
+      # - ./.docker/php/pool.ini:/usr/local/etc/php-fpm.d/www.conf
+      # - ./.docker/php/php.ini:/usr/local/etc/php/php.ini
+    ports:
+      - "83:80"
+    networks:
+      - network-default
+    depends_on:
+      - db
+
+  db:
+    container_name: medportal-db
+    image: postgres
+    ports:
+      - "5435:5432"
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - network-default
