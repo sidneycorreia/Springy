@@ -21,6 +21,7 @@ $GLOBALS['SYSTEM'] = [
         'localhost'             => 'development',
         '127\.0\.0\.1'          => 'development',
         'sidney.comsistema.com.br' => 'production',
+        'ec2-18-222-237-201.us-east-2.compute.amazonaws.com' => 'production',
     ],
 
     // Web server doc root directory
