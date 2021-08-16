@@ -20,7 +20,7 @@ $GLOBALS['SYSTEM'] = [
     'ENVIRONMENT_ALIAS'    => [
         'localhost'             => 'development',
         '127\.0\.0\.1'          => 'development',
-        '(www\.)?mydomain\.com' => 'production',
+        'ec2-18-222-237-201.us-east-2.compute.amazonaws.com' => 'production',
     ],
 
     // Web server doc root directory
