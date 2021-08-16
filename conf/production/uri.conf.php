@@ -23,7 +23,7 @@
 /// Configurações para o ambiente de Produção
 $conf = [
     'host_controller_path' => [
-        'sidney.comsistema.com.br' => [''],
+        'sidney.comsistema.com.br' => [null],
     ],
     'dynamic' => $_SERVER['HTTP_HOST'],
     'static'  => $_SERVER['HTTP_HOST'],
