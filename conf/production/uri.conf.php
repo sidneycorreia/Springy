@@ -23,7 +23,7 @@
 /// Configurações para o ambiente de Produção
 $conf = [
     'host_controller_path' => [
-        'ec2-18-222-237-201.us-east-2.compute.amazonaws.com' => ['diretorio'],
+        'sidney.comsistema.com.br' => ['diretorio'],
     ],
     'dynamic' => $_SERVER['HTTP_HOST'],
     'static'  => $_SERVER['HTTP_HOST'],
